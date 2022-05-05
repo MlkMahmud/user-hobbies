@@ -9,8 +9,9 @@
     "noFallthroughCasesInSwitch": true,
     "esModuleInterop": true,
     "noImplicitAny": true,
-    "moduleResolution": "node"
-},
+    "moduleResolution": "node",
+    "outDir": "dist"
+  },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "__tests__"]
 }
