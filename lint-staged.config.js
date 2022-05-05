@@ -3,4 +3,5 @@ module.exports = {
     'bash -c tsc --noEmit',
     'eslint --cache --fix',
   ],
+  '**/*.json': 'prettier --write',
 };
