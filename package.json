@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "Technical assessment for a backend engineering role at Arive.",
   "scripts": {
+    "build": "tsc",
     "dev": "cross-env NODE_ENV=development nodemon",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "start": "cross-env NODE_ENV=production node dist/index | bunyan"
   },
   "repository": {
     "type": "git",
