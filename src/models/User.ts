@@ -7,8 +7,8 @@ const userSchema = new Schema({
     unique: true,
   },
   hobbies: [{ type: Schema.Types.ObjectId, ref: 'Hobby' }]
-})
-
+});
+userSchema.set('toJSON', { versionKey: false });
 userSchema.plugin(uniqueValidator, { message: 'This {PATH} is already taken' });
 
 export default model(
