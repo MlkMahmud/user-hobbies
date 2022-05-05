@@ -14,4 +14,12 @@ router.route('/users')
     res.json({ success: true, data });
   });
 
+router.route('/users/:userId/hobbies')
+  .post(async (req, res) => {
+    const { userId } = req.params;
+    const hobby = await controllers.createHobby({ ...req.body, user: userId });
+    res.statusCode = 201;
+    res.json({ success: true, data: hobby });
+  });
+
 export default router;
