@@ -1,0 +1,22 @@
+{
+  "name": "user-hobbies",
+  "version": "1.0.0",
+  "description": "Technical assessment for a backend engineering role at Arive.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MlkMahmud/user-hobbies.git"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Malik Mahmud",
+    "email": "almalikmahmud@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MlkMahmud/user-hobbies/issues"
+  },
+  "homepage": "https://github.com/MlkMahmud/user-hobbies#readme"
+}
