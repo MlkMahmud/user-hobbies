@@ -1,5 +1,5 @@
 {
   "watch": ["src"],
-  "exec": "ts-node src/index.ts",
+  "exec": "ts-node -r dotenv/config src/index.ts | bunyan",
   "ext": "ts"
 }
