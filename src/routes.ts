@@ -15,6 +15,11 @@ router.route('/users')
   });
 
 router.route('/users/:userId/hobbies')
+  .get(async (req, res) => {
+    const { userId } = req.params;
+    const hobbies = await controllers.geHobbies(userId);
+    res.json({ success: true, data: hobbies });
+  })
   .post(async (req, res) => {
     const { userId } = req.params;
     const hobby = await controllers.createHobby({ ...req.body, user: userId });

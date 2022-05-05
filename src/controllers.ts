@@ -1,4 +1,5 @@
 import Joi from 'joi';
+import { isValidObjectId } from 'mongoose';
 import { Hobby, User } from './models';
 
 interface IUser { name: string };
@@ -68,5 +69,13 @@ export default {
       }
       throw err;
     }
+  },
+
+  async geHobbies (userId: string) {
+    if (!isValidObjectId(userId)) {
+      throw new HttpError(404, 'User Id does not exist');
+    }
+    const hobbies = await Hobby.find({ user: userId });
+    return hobbies;
   }
 };
