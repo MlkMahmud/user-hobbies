@@ -17,7 +17,7 @@ router.route('/')
 router.route('/:userId/hobbies')
   .get(async (req, res) => {
     const { userId } = req.params;
-    const hobbies = await controllers.geHobbies(userId);
+    const hobbies = await controllers.getHobbies(userId);
     res.json({ success: true, data: hobbies });
   })
   .post(async (req, res) => {

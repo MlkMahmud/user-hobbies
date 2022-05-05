@@ -67,11 +67,11 @@ export default {
     return hobby;
   },
 
-  async geHobbies (userId: string) {
+  async getHobbies (userId: string) {
     if (!isValidObjectId(userId)) {
       throw new HttpError(404, 'User does not exist');
     }
-    const hobbies = await Hobby.find({ userId }, { userId: 0 });
+    const hobbies = await Hobby.find({ userId });
     return hobbies;
   },
 
