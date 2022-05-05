@@ -2,7 +2,7 @@ import { model, Schema } from 'mongoose';
 
 const hobbySchema = new Schema({
   name: { type: String },
-  user: { type: Schema.Types.ObjectId, ref: 'User' },
+  userId: { type: Schema.Types.ObjectId },
   year: { type: Number, default: new Date().getFullYear() },
   passionLevel: { type: String, default: 'Low' },
 });

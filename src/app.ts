@@ -6,7 +6,7 @@ const app = express();
 
 app.use(Sentry.Handlers.requestHandler());
 app.use(express.json());
-app.use(router);
+app.use('/users', router);
 app.use(Sentry.Handlers.errorHandler())
 app.use((err: any, _req: Request, res: Response, next: NextFunction) => {
   if (res.headersSent) {
