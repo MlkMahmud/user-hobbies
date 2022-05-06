@@ -1,6 +1,6 @@
 import express, { NextFunction, Request, Response } from 'express';
 import swaggerUI from 'swagger-ui-express';
-import swaggerDoc from '../swagger.json';
+import swaggerDoc from './swagger.json';
 import Sentry from './lib/sentry';
 import router from './routes';
 
