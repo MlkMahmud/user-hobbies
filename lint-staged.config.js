@@ -1,6 +1,6 @@
 module.exports = {
   '**/*.{ts,tsx}': [
-    'tsc --esModuleInterop --noEmit',
+    'tsc --esModuleInterop --noEmit --resolveJsonModule',
     'eslint --cache --fix',
   ],
   '**/*.json': 'prettier --write',
